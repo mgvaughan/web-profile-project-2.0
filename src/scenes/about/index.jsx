@@ -19,7 +19,7 @@ const Link = ({ page, icon, selectedPage, setSelectedPage }) => {
 
 const About = ({ selectedPage, setSelectedPage }) => {
   return (
-    <div id='about' className="w-full text-center lg:h-screen ">
+    <div id='about' className="w-full text-center lg:h-screen pt-24 pb-32">
       <div className="w-full h-full mx-auto p-2 flex justify-center items-center">
         <div className="">
           <p className="text-green  max-w-[70%] m-auto text-4xl font-bold">
