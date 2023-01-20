@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Sticky } from 'react-sticky';
 import useMediaQuery from '../../hooks/useMediaQuery';
-import menuIcon from '../../assets/menu-icon.svg'
-import closeIcon from '../../assets/close-icon.svg'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {

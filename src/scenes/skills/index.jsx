@@ -1,20 +1,5 @@
-import React from 'react'
-// import {
-//   DiCss3,
-//   DiGithubBadge,
-//   DiHeroku,
-//   DiHtml5,
-//   DiJsBadge,
-//   DiMongodb,
-//   DiMysql,
-//   DiNodejs,
-//   DiPython,
-//   DiReact
-// } from "react-icons/di"
-
 import htmlLogo from '../../assets/skills/html.png'
 import cssLogo from '../../assets/skills/css.png'
-import githubLogo from '../../assets/skills/github.png'
 import javascriptLogo from '../../assets/skills/javascript.png'
 import mongoLogo from '../../assets/skills/mongo.png'
 import nextjsLogo from '../../assets/skills/nextjs.png'

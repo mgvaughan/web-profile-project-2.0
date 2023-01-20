@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from "framer-motion";
-import reactTetris from '../../src/assets/React-Tetris-Thumbnail.png'
 
 const ProjectCard = ({ thumbnail, cardTitle, description, skills, url }) => {
     return (
