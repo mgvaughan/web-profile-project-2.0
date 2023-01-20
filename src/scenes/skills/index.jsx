@@ -10,7 +10,7 @@ import nodeLogo from '../../assets/skills/node.png'
 
 const Skills = () => {
     return (
-        <div id='skills' className='bg-[#c8c8c8] w-full lg:h-screen pt-24 pb-32 '>
+        <div id='skills' className='bg-[#c8c8c8] w-full lg:h-screen pt-24 pb-32'>
             <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full my-5'>
                 <p className='py-4 text-5xl tracking-widest uppercase text-green font-bold my-5 underline text-center'>Main Skills</p>
                 <div className='bg-[#c8c8c8] grid md:grid-cols-4 lg:grid-cols-4 gap-8 mb-5'>
