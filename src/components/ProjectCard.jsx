@@ -1,8 +1,15 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 const ProjectCard = ({ thumbnail, cardTitle, description, skills, url }) => {
     return (
-        <div className="shadow-xl hover:scale-105 ease-in duration-300 bg-[#E8E8E8]">
+        <motion.div 
+        className="shadow-xl hover:scale-105 ease-in duration-300 bg-[#E8E8E8] mx-5"
+        variants={{
+            hidden: { opacity: 0, scale: 0.8 },
+            visible: { opacity: 1, scale: 1 }
+        }}
+        >
             <p className="text-center text-black font-bold text-3xl py-2">{cardTitle}</p>
             <div className='m-auto'>
                 <img
@@ -18,7 +25,7 @@ const ProjectCard = ({ thumbnail, cardTitle, description, skills, url }) => {
                 </button>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

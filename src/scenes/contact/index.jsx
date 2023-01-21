@@ -3,6 +3,7 @@ import profilePic from '../../assets/IMG_1245.jpg'
 import { AiOutlineMail } from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn, FaFileAlt } from 'react-icons/fa'
 import resume from '../../assets/Michael-Vaughan-Resume.pdf'
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const inputStyles = 'mb-5 w-full rounded-lg bg-[#f8f9fa] px-5 py-3 placeholder-black text-black';
@@ -21,20 +22,71 @@ const Contact = () => {
   }
 
   return (
-    <div id="contact" className="bg-[#c8c8c8] mx-auto pt-24 pb-32 w-full p-2">
-      <div className="w-[90%] mx-auto">
-        <p className="py-4 text-5xl tracking-widest uppercase text-green font-bold my-5 underline text-center">Contact Me</p>
-        <div className='mt-10 grid md:grid-cols-2 justify-between gap-8 md:flex'>
+    <div id="contact" className="bg-[#c8c8c8] w-full lg:h-screen pt-24 pb-32">
+      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full my-5'>
 
-          <div className="md:w-[60%] before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
+        <motion.div
+          className="w-[90%] mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.7 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 }
+          }}
+        >
+          <p className="py-4 text-5xl tracking-widest uppercase text-green font-bold my-5 text-center">Contact Me</p>
+        </motion.div>
+
+
+        <div className='mt-10 grid md:grid-cols-2 justify-between gap-8 md:flex mx-5 md:mx-auto'>
+
+          <motion.div className="md:w-[60%] md:mx-auto mx-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 }
+            }}
+          >
             <img
               className="w-full rounded-lg"
               alt="profile-pic"
               src={profilePic}
             />
-          </div>
+            <div className="flex items-center justify-between max-w-[250px] mx-auto py-4 mt-2">
+              <a href="https://www.linkedin.com/in/michael-vaughan-pe-939460227/">
+                <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 text-black bg-[#f8f9fa]'>
+                  <FaLinkedinIn size={20} />
+                </div>
+              </a>
+              <a href="https://github.com/mgvaughan">
+                <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 text-black bg-[#f8f9fa]'>
+                  <FaGithub size={20} />
+                </div>
+              </a>
+              <a href={resume} target="_blank">
+                <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 text-black bg-[#f8f9fa]'>
+                  <FaFileAlt size={20} />
+                </div>
+              </a>
+            </div>
+          </motion.div>
 
-          <div className="mt-10 md:mt-0">
+          <motion.div
+            className="mx-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 }
+            }}
+          >
             <form
               target="_blank"
               onSubmit={onSubmit}
@@ -76,8 +128,8 @@ const Contact = () => {
               <textarea
                 className={inputStyles}
                 placeholder="MESSAGE"
-                rows={10}
-                cols={50}
+                rows={15}
+                cols={15}
                 {...register("message", {
                   required: true,
                   maxLength: 2000,
@@ -98,28 +150,12 @@ const Contact = () => {
               </button>
 
             </form>
-            <div className="flex items-center justify-between max-w-[250px] m-auto py-4">
-              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 text-black bg-[#f8f9fa]'>
-                <a href="https://www.linkedin.com/in/michael-vaughan-pe-939460227/">
-                  <FaLinkedinIn size={20} />
-                </a>
-              </div>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 text-black bg-[#f8f9fa]'>
-                <a href="https://github.com/mgvaughan">
-                  <FaGithub size={20} />
-                </a>
-              </div>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 text-black bg-[#f8f9fa]'>
-                <a href={resume} target="_blank">
-                  <FaFileAlt size={20} />
-                </a>
-              </div>
-            </div>
-          </div>
+
+          </motion.div>
 
 
         </div>
-      </div >
+      </div>
 
     </div >
   )

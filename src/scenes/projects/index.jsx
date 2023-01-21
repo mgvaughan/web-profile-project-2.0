@@ -7,14 +7,39 @@ import mernSocialMediaImg from '../../assets/mern-fullstack-social-media-app.png
 import adminDashImg from '../../assets/React-Admin-Dashboard.png'
 import reactTetrisImg from '../../assets/React-Tetris-Thumbnail.png'
 import javascriptTetrisImg from '../../assets/Javascript-Tetris-Thumbnail.png'
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.3 }
+  }
+};
 
 const Projects = () => {
   return (
-    <div id="projects" className='bg-[#f8f9fa] w-full lg:h-screen pt-24 pb-32 '>
+    <div id="projects" className='bg-[#f8f9fa] w-full lg:h-screen pt-24 pb-32'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full my-5'>
-        <p className='py-4 text-5xl tracking-widest uppercase text-green font-bold my-5 underline text-center'>My Projects</p>
-
-        <div className="bg-[#f8f9fa] grid md:grid-cols-2 lg:grid-cols-4 gap-10 my-5">
+        <motion.div
+                className='max-w-[1240px] mx-auto flex flex-col justify-center h-full my-5'
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                    hidden: { opacity: 0, x: 0 },
+                    visible: { opacity: 1, x: 0 }
+                }}
+            >
+        <p className='py-4 text-5xl tracking-widest uppercase text-green font-bold my-5 text-center'>My Projects</p>
+        </motion.div>
+        <motion.div
+          className="bg-[#f8f9fa] grid md:grid-cols-2 gap-10 my-5 mx-5 md:mx-auto"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           <ProjectCard
             thumbnail={mernAdminDashImg}
             cardTitle="Fullstack Admin Dashboard"
@@ -64,7 +89,7 @@ const Projects = () => {
             skills="JavaScript, Node.js/Express, CSS, HTML"
             url="https://javascript-tetris-mv.herokuapp.com/"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   )
