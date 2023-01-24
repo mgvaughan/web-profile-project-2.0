@@ -42,6 +42,13 @@ const Projects = () => {
         >
           <ProjectCard
             thumbnail={mernAdminDashImg}
+            cardTitle="Next.js Example Portfolio Website"
+            description="The link below is to an example of a portfolio website I created using the Next.js framework. Building this project gave me an opportunity to build a good looking practice website using the Next.js framework.  It was a good project to build to help me better understand how useful nextjs is."
+            skills="Next.js, React, Tailwind JavaScript"
+            url="https://nextjs-portfolio-website-henna.vercel.app//"
+          />
+          <ProjectCard
+            thumbnail={mernAdminDashImg}
             cardTitle="Fullstack Admin Dashboard"
             description="The link below is to an example of a fullstack admin dashboard I created using the MERN stack. This was a good project for me to get experience building because it gave me an opportunity to build a realistic a fullstack site with realistic data, and using the Redux library.  Website was deployed from using Render."
             skills="MongoDB, React, Redux, Express, Node.js, JavaScript"
