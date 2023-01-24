@@ -7,6 +7,8 @@ import mernSocialMediaImg from '../../assets/mern-fullstack-social-media-app.png
 import adminDashImg from '../../assets/React-Admin-Dashboard.png'
 import reactTetrisImg from '../../assets/React-Tetris-Thumbnail.png'
 import javascriptTetrisImg from '../../assets/Javascript-Tetris-Thumbnail.png'
+import nextjsPortfolioImg from '../../assets/nextjs-example-portfolio-project.png'
+import nextjsPhotographyImg from '../../assets/nextjs-example-photography-website.png'
 import { motion } from "framer-motion";
 
 const container = {
@@ -41,11 +43,18 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <ProjectCard
-            thumbnail={mernAdminDashImg}
+            thumbnail={nextjsPhotographyImg}
             cardTitle="Next.js Example Portfolio Website"
             description="The link below is to an example of a portfolio website I created using the Next.js framework. Building this project gave me an opportunity to build a good looking practice website using the Next.js framework.  It was a good project to build to help me better understand how useful nextjs is."
-            skills="Next.js, React, Tailwind JavaScript"
-            url="https://nextjs-portfolio-website-henna.vercel.app//"
+            skills="Next.js, React, Tailwind, JavaScript"
+            url="https://nextjs-photography-website-d8kcqtxso-mgvaughan66-gmailcom.vercel.app/"
+          />
+          <ProjectCard
+            thumbnail={nextjsPortfolioImg}
+            cardTitle="Next.js Example Photography Website"
+            description="The link below is to an example of a photography website I created using the Next.js framework. Building this project gave me an opportunity to build a good looking realistic website using the Next.js framework.  It was a good project to build to help me better how nextjs lazy loads images."
+            skills="Next.js, React, Tailwind, JavaScript"
+            url="https://nextjs-portfolio-website-henna.vercel.app/"
           />
           <ProjectCard
             thumbnail={mernAdminDashImg}
