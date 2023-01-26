@@ -55,14 +55,14 @@ const Projects = () => {
             cardTitle="Next.js Portfolio Website"
             description="The link below is to an example of a portfolio website I created using the Next.js framework. Building this project gave me an opportunity to build a good looking practice website using the Next.js framework.  It was a good project to build to help me better understand how useful nextjs is."
             skills="Next.js, React, Tailwind, JavaScript"
-            url="https://nextjs-photography-website-d8kcqtxso-mgvaughan66-gmailcom.vercel.app/"
+            url="https://nextjs-portfolio-website-henna.vercel.app/"
           />
           <ProjectCard
             thumbnail={nextjsPhotographyImg}
             cardTitle="Next.js Photography Website"
             description="The link below is to an example of a photography website I created using the Next.js framework. Building this project gave me an opportunity to build a good looking realistic website using the Next.js framework.  It was a good project to build to help me better how nextjs lazy loads images."
             skills="Next.js, React, Tailwind, JavaScript"
-            url="https://nextjs-portfolio-website-henna.vercel.app/"
+            url="https://nextjs-photography-website-d8kcqtxso-mgvaughan66-gmailcom.vercel.app/"
           />
           <ProjectCard
             thumbnail={mernAdminDashImg}
