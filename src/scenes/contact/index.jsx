@@ -6,7 +6,7 @@ import resume from '../../assets/Michael-Vaughan-Resume.pdf'
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const inputStyles = 'mb-5 w-full rounded-lg bg-[#f8f9fa] px-5 py-3 placeholder-black text-black';
+  const inputStyles = 'w-full rounded-lg bg-[#f8f9fa] px-5 py-3 placeholder-black text-black';
 
   const {
     register,
@@ -40,9 +40,9 @@ const Contact = () => {
         </motion.div>
 
 
-        <div className='mt-10 grid md:grid-cols-2 justify-between gap-8 md:flex mx-5 md:mx-auto'>
+        <div className='mt-10 grid md:grid-cols-4 justify-between gap-8 md:flex mx-5 md:mx-auto'>
 
-          <motion.div className="md:w-[60%] md:mx-auto mx-5"
+          <motion.div className="md:w-[50%] md:mx-auto mx-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -77,7 +77,7 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-            className="mx-5"
+            className="md:w-[50%] md:mx-auto mx-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -93,55 +93,58 @@ const Contact = () => {
               action="https://formsubmit.co/29d84377024a9c28ed398a076ffe0b48"
               method="POST"
             >
-              <input
-                className={inputStyles}
-                type="text"
-                placeholder="NAME"
-                {...register("name", {
-                  required: true,
-                  maxLength: 100,
-                })}
-              />
-              {errors.name && (
-                <p className="mt-1 text-red-600">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" && "Max length is 100 characters."}
-                </p>
-              )}
-
-              <input
-                className={inputStyles}
-                type="text"
-                placeholder="EMAIL"
-                {...register("email", {
-                  required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                })}
-              />
-              {errors.email && (
-                <p className="mt-1 text-red-600">
-                  {errors.email.type === "required" && "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address."}
-                </p>
-              )}
-
-              <textarea
-                className={inputStyles}
-                placeholder="MESSAGE"
-                rows={15}
-                cols={50}
-                {...register("message", {
-                  required: true,
-                  maxLength: 2000,
-                })}
-              />
-              {errors.message && (
-                <p className="mt-1 text-red-600">
-                  {errors.message.type === "required" && "This field is required."}
-                  {errors.message.type === "maxLength" && "Max length is 2000 characters."}
-                </p>
-              )}
-
+              <div className="w-full mb-5">
+                <input
+                  className={inputStyles}
+                  type="text"
+                  placeholder="NAME"
+                  {...register("name", {
+                    required: true,
+                    maxLength: 100,
+                  })}
+                />
+                {errors.name && (
+                  <p className="mt-1 text-[#FF0000]">
+                    {errors.name.type === "required" && "This field is required."}
+                    {errors.name.type === "maxLength" && "Max length is 100 characters."}
+                  </p>
+                )}
+              </div>
+              <div className="w-full mb-5">
+                <input
+                  className={inputStyles}
+                  type="text"
+                  placeholder="EMAIL"
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  })}
+                />
+                {errors.email && (
+                  <p className="mt-1 text-[#FF0000]">
+                    {errors.email.type === "required" && "This field is required."}
+                    {errors.email.type === "pattern" && "Invalid email address."}
+                  </p>
+                )}
+              </div>
+              <div className="w-full mb-5">
+                <textarea
+                  className={inputStyles}
+                  placeholder="MESSAGE"
+                  rows={15}
+                  cols={50}
+                  {...register("message", {
+                    required: true,
+                    maxLength: 2000,
+                  })}
+                />
+                {errors.message && (
+                  <p className="mt-1 text-[#FF0000]">
+                    {errors.message.type === "required" && "This field is required."}
+                    {errors.message.type === "maxLength" && "Max length is 2000 characters."}
+                  </p>
+                )}
+              </div>
               <button
                 type="submit"
                 className="text-black w-full rounded-lg bg-yellow px-20 py-3 ease-in duration-300 hover:scale-105"
