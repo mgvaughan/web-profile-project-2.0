@@ -131,7 +131,7 @@ const Contact = () => {
                 <textarea
                   className={inputStyles}
                   placeholder="MESSAGE"
-                  rows={15}
+                  rows={13}
                   cols={50}
                   {...register("message", {
                     required: true,
