@@ -17,9 +17,9 @@ const Contact = () => {
   const onSubmit = async (e) => {
     const isValid = await trigger();
     if (!isValid) {
-      e.preventDefault();
+      e.preventDefault()
     }
-  }
+  };
 
   return (
     <div id="contact" className="bg-[#c8c8c8] w-full lg:h-screen pt-24 pb-32">
@@ -103,9 +103,9 @@ const Contact = () => {
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-green">
-                  {errors.name.type === 'required' & 'This field is required.'}
-                  {errors.name.type === 'maxLength' & 'Max length is 100 characters.'}
+                <p className="mt-1 text-red-600">
+                  {errors.name.type === "required" && "This field is required."}
+                  {errors.name.type === "maxLength" && "Max length is 100 characters."}
                 </p>
               )}
 
@@ -119,8 +119,8 @@ const Contact = () => {
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-green">
-                  {errors.email.type === "required" && "This field is required"}
+                <p className="mt-1 text-red-600">
+                  {errors.email.type === "required" && "This field is required."}
                   {errors.email.type === "pattern" && "Invalid email address."}
                 </p>
               )}
@@ -129,14 +129,14 @@ const Contact = () => {
                 className={inputStyles}
                 placeholder="MESSAGE"
                 rows={15}
-                cols={15}
+                cols={50}
                 {...register("message", {
                   required: true,
                   maxLength: 2000,
                 })}
               />
               {errors.message && (
-                <p className="mt-1 text-green">
+                <p className="mt-1 text-red-600">
                   {errors.message.type === "required" && "This field is required."}
                   {errors.message.type === "maxLength" && "Max length is 2000 characters."}
                 </p>
