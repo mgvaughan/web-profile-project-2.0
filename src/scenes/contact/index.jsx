@@ -6,7 +6,7 @@ import resume from '../../assets/Michael-Vaughan-Resume.pdf'
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const inputStyles = 'w-full rounded-lg bg-[#f8f9fa] px-5 py-3 placeholder-black text-black';
+  const inputStyles = 'w-full bg-[#f8f9fa] px-5 py-3 placeholder-black text-black shadow-lg';
 
   const {
     register,
@@ -53,7 +53,7 @@ const Contact = () => {
             }}
           >
             <img
-              className="w-full rounded-lg"
+              className="w-full"
               alt="profile-pic"
               src={profilePic}
             />
@@ -147,7 +147,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="text-black w-full rounded-lg bg-yellow px-20 py-3 ease-in duration-300 hover:scale-105"
+                className="text-black w-full rounded-lg tracking-widest bg-yellow px-20 py-3 ease-in duration-300 hover:scale-105"
               >
                 SUBMIT
               </button>

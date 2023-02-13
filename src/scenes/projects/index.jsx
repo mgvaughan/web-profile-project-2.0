@@ -10,6 +10,7 @@ import javascriptTetrisImg from '../../assets/Javascript-Tetris-Thumbnail.png'
 import nextjsPortfolioImg from '../../assets/nextjs-example-portfolio-project.png'
 import nextjsPhotographyImg from '../../assets/nextjs-example-photography-website.png'
 import drewsPlantNurseryImg from '../../assets/drews-plant-nursery.png'
+import jimsContstructionBhamImg from '../../assets/jims-construction-bham.png'
 import { motion } from "framer-motion";
 
 const container = {
@@ -24,17 +25,17 @@ const Projects = () => {
     <div id="projects" className='bg-[#f8f9fa] w-full lg:h-screen pt-24 pb-32'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full my-5'>
         <motion.div
-                className='max-w-[1240px] mx-auto flex flex-col justify-center h-full my-5'
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.5 }}
-                variants={{
-                    hidden: { opacity: 0, x: 0 },
-                    visible: { opacity: 1, x: 0 }
-                }}
-            >
-        <p className='py-4 text-5xl tracking-widest uppercase text-green font-bold my-5 text-center'>My Projects</p>
+          className='max-w-[1240px] mx-auto flex flex-col justify-center h-full my-5'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: 0 },
+            visible: { opacity: 1, x: 0 }
+          }}
+        >
+          <p className='py-4 text-5xl tracking-widest uppercase text-green font-bold my-5 text-center'>My Projects</p>
         </motion.div>
         <motion.div
           className="bg-[#f8f9fa] grid md:grid-cols-2 gap-10 my-5 mx-5 md:mx-auto"
@@ -44,10 +45,17 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           <ProjectCard
+            thumbnail={jimsContstructionBhamImg}
+            cardTitle="Jim's Construction, LLC Website"
+            description="Built a website with my brother that that showcases the services Jim's Construction can provide. This first phase of the website is currently a recreation of the client's wordpress website. Now that the first phase build out has been completed, we will be enhancing the quality of the website per the client's requests."
+            skills="SEO, Next.js, React, Tailwind, JavaScript, Contentful"
+            url="https://jims-construction-bham.vercel.app/"
+          />
+          <ProjectCard
             thumbnail={drewsPlantNurseryImg}
             cardTitle="Drew's Plant Nursery Website"
-            description="Built a website that uses Next.js and the headless CMS Contentful that showcases the inventory Drew’s Plant Nursery will be selling at their semi-annual plant sales.  This website allows their business to advance from a simple mailing list that lists, to a website where buyers can see and learn all about the 200+ plants prior to the sale."
-            skills="Next.js, React, Tailwind, JavaScript, Contentful"
+            description="Built a website with my brother that uses Next.js and the headless CMS Contentful that showcases the inventory Drew’s Plant Nursery will be selling at their semi-annual plant sales.  This website allows their business to advance from a simple mailing list that lists, to a website where buyers can see and learn all about the 200+ plants prior to the sale."
+            skills="SEO, Next.js, React, Tailwind, JavaScript, Contentful"
             url="https://drews-plant-nursery.vercel.app/"
           />
           <ProjectCard
